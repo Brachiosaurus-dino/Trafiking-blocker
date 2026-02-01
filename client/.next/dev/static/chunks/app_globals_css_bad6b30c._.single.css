@@ -1,0 +1,125 @@
+/* [project]/app/globals.css [app-client] (css) */
+:root {
+  --primary-color: #ff4757;
+  --primary-hover: #ff6b81;
+  --bg-color: #1e272e;
+  --card-bg: #2f3640;
+  --text-main: #f1f2f6;
+  --text-secondary: #ced6e0;
+  --success: #2ed573;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px #ff475780;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.container {
+  background: var(--card-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px #0000004d;
+}
+
+input {
+  width: 100%;
+  color: var(--text-main);
+  background: #0003;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 12px 16px;
+  font-size: 1rem;
+  transition: all .3s;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px #ff475733;
+}
+
+label {
+  color: var(--text-secondary);
+  margin-left: 4px;
+  font-size: .9rem;
+}
+
+.sos-btn {
+  background: linear-gradient(135deg, var(--primary-color), red);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  transition: transform .2s, box-shadow .2s;
+  animation: 2s infinite pulse;
+  display: flex;
+  box-shadow: 0 0 20px #ff475799;
+}
+
+.sos-btn:active {
+  transform: scale(.95);
+}
+
+.sos-btn:hover {
+  box-shadow: 0 0 30px #ff4757cc;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 #ff4757b3;
+  }
+
+  70% {
+    box-shadow: 0 0 0 20px #ff475700;
+  }
+
+  100% {
+    box-shadow: 0 0 #ff475700;
+  }
+}
+
+.status-msg {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.status-success {
+  color: var(--success);
+}
+
+.status-error {
+  color: var(--primary-color);
+}
+
+/*# sourceMappingURL=app_globals_css_bad6b30c._.single.css.map*/
