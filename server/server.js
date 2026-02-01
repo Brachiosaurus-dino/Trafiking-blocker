@@ -32,7 +32,8 @@ app.post('/api/sos', (req, res) => {
         // Send SMS via Fast2SMS
         const apiKey = 'h4LXY5YV9HzDiowPgVMD6sSybeWC81VhSndn2cQXkA06TToaNJSnIXTAAXRb';
         const message = `SOS Alert! Help needed. Name: ${name}, Phone: ${phone}, Location: https://www.google.com/maps?q=${latitude},${longitude}`;
-        const numbers = '7658885842';
+        // const numbers = '7658885842';
+        const numbers = '9779611696';
 
         axios.get('https://www.fast2sms.com/dev/bulkV2', {
             params: {
