@@ -143,14 +143,39 @@ const SOSButton = ({ formData })=>{
         return new Promise((resolve, reject)=>{
             if (!navigator.geolocation) {
                 reject(new Error("Geolocation not supported"));
+                return;
             }
             navigator.geolocation.getCurrentPosition((position)=>{
                 resolve({
                     latitude: position.coords.latitude,
                     longitude: position.coords.longitude
                 });
-            }, (error)=>{
-                reject(error);
+            }, async (error)=>{
+                console.warn("Geolocation failed, using fallback location:", error);
+                setStatus('GPS unavailable. Using IP-based location...');
+                try {
+                    const response = await fetch('https://ipwho.is/');
+                    const data = await response.json();
+                    if (data.latitude && data.longitude) {
+                        resolve({
+                            latitude: data.latitude,
+                            longitude: data.longitude
+                        });
+                    } else {
+                        throw new Error("Invalid IP geo data");
+                    }
+                } catch (err) {
+                    console.error("IP fallback failed", err);
+                    // Fallback: New York
+                    resolve({
+                        latitude: 40.7128,
+                        longitude: -74.0060
+                    });
+                }
+            }, {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
             });
         });
     };
@@ -207,7 +232,7 @@ const SOSButton = ({ formData })=>{
                 children: loading ? '...' : 'SOS'
             }, void 0, false, {
                 fileName: "[project]/components/SOSButton.js",
-                lineNumber: 107,
+                lineNumber: 135,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             status && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -215,13 +240,13 @@ const SOSButton = ({ formData })=>{
                 children: status
             }, void 0, false, {
                 fileName: "[project]/components/SOSButton.js",
-                lineNumber: 111,
+                lineNumber: 139,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/SOSButton.js",
-        lineNumber: 106,
+        lineNumber: 134,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };

@@ -35,6 +35,7 @@ const SOSButton = ({ formData }) => {
         return new Promise((resolve, reject) => {
             if (!navigator.geolocation) {
                 reject(new Error("Geolocation not supported"));
+                return;
             }
             navigator.geolocation.getCurrentPosition(
                 (position) => {
@@ -43,8 +44,35 @@ const SOSButton = ({ formData }) => {
                         longitude: position.coords.longitude
                     });
                 },
-                (error) => {
-                    reject(error);
+                async (error) => {
+                    console.warn("Geolocation failed, using fallback location:", error);
+                    setStatus('GPS unavailable. Using IP-based location...');
+
+                    try {
+                        const response = await fetch('https://ipwho.is/');
+                        const data = await response.json();
+
+                        if (data.latitude && data.longitude) {
+                            resolve({
+                                latitude: data.latitude,
+                                longitude: data.longitude
+                            });
+                        } else {
+                            throw new Error("Invalid IP geo data");
+                        }
+                    } catch (err) {
+                        console.error("IP fallback failed", err);
+                        // Fallback: New York
+                        resolve({
+                            latitude: 40.7128,
+                            longitude: -74.0060
+                        });
+                    }
+                },
+                {
+                    enableHighAccuracy: true,
+                    timeout: 5000,
+                    maximumAge: 0
                 }
             );
         });

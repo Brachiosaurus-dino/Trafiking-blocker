@@ -1,66 +1,12 @@
-[00:00:00.847] Server  WARN    ⚠ Duplicate page detected. app/page.js and app/page.tsx resolve to /
-[00:00:00.847] Server  WARN    ⚠ Duplicate page detected. app/page.js and app/page.tsx resolve to /
-[00:00:00.848] Server  LOG     ✓ Ready in 640ms
-[00:01:02.012] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:12.307] Browser ERROR   Camera error: {}
-[00:02:12.307] Browser ERROR   {}
-[00:02:21.000] Browser ERROR   Camera error: {}
-[00:02:21.000] Browser ERROR   {}
-[00:40:12.037] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:41:18.137] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:42:17.635] Server  LOG     ✓ Compiled in 11ms
-[00:42:22.296] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:42:28.400] Server  LOG     ✓ Compiled in 7ms
-[01:20:01.404] Server  LOG     ✓ Compiled in 32ms
-[01:21:17.928] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:25:31.326] Server  LOG     ✓ Compiled in 17ms
-[01:25:58.549] Browser ERROR   A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://react.dev/link/controlled-components
-[01:36:15.339] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:37:05.717] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:37:11.238] Browser ERROR   A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://react.dev/link/controlled-components
-[01:37:29.089] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:37:33.022] Browser ERROR   A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://react.dev/link/controlled-components
-[01:37:54.912] Server  LOG     ✓ Compiled in 25ms
-[01:38:17.998] Server  LOG     ✓ Compiled in 7ms
-[01:38:20.857] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:38:31.633] Server  LOG     ✓ Compiled in 11ms
-[01:47:25.931] Browser ERROR   {}
-[01:50:22.859] Server  LOG     ✓ Compiled in 70ms
-[01:53:16.582] Server  LOG     ✓ Compiled in 19ms
-[01:54:38.261] Server  LOG     ✓ Compiled in 7ms
-[01:57:25.706] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:48:23.666] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:01:53.584] Server  LOG     ✓ Compiled in 21ms
-[03:02:12.170] Server  LOG     ✓ Compiled in 19ms
-[03:07:29.437] Server  LOG     ✓ Compiled in 52ms
-[03:07:30.358] Browser ERROR   ./components/SafetyForm.js:12:42
-Parsing ecmascript source code failed
-  10 |     return (
-  11 |         <div style={{ marginBottom: '20px' }}>
-> 12 |             <div style={{ marginRight: 10px }}>
-     |                                          ^^
-  13 |                 <label htmlFor="name">Full Name</label>
-  14 |                 <input
-  15 |                     type="text"
-
-Expected '</', got 'ident'
-
-Import traces:
-  Client Component Browser:
-    ./components/SafetyForm.js [Client Component Browser]
-    ./app/page.js [Client Component Browser]
-    ./app/page.js [Server Component]
-
-  Client Component SSR:
-    ./components/SafetyForm.js [Client Component SSR]
-    ./app/page.js [Client Component SSR]
-    ./app/page.js [Server Component]
-[03:07:44.331] Server  LOG     ✓ Compiled in 9ms
-[03:08:24.680] Server  LOG     ✓ Compiled in 8ms
-[04:07:43.470] Browser ERROR   {}
-[04:07:58.543] Browser ERROR   {}
-[04:08:34.751] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:08:48.712] Browser ERROR   {}
-[04:09:03.790] Browser ERROR   {}
-[04:15:07.738] Browser ERROR   {}
-[04:19:06.610] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.406] Server  LOG     ✓ Ready in 1148ms
+[00:00:33.592] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:51.056] Browser ERROR   {}
+[00:01:05.444] Browser ERROR   {}
+[00:01:40.666] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:59.679] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:13.975] Browser ERROR   {}
+[00:02:37.726] Server  LOG     ✓ Compiled in 80ms
+[00:03:20.892] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:36.628] Browser WARN    Geolocation failed, using fallback location: {}
+[00:08:47.949] Server  LOG     ✓ Compiled in 34ms
+[00:09:36.801] Browser WARN    Geolocation failed, using fallback location: {}
